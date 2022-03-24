@@ -1,0 +1,3 @@
+aiohttp==3.7.4.post0
+multiprocess==0.70.12.2
+asyncio==3.4.3
