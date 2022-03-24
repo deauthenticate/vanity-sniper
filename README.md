@@ -1,2 +1,2 @@
 # vanity-sniper
-A fast, asynchronous vanity sniper, steals vanity below any security bot.
+A fast, asynchronous vanity sniper, steals vanity under any security bot.
