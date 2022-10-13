@@ -29,17 +29,17 @@ bot = input("Bot [True/False]: ")
 erase()
 tkn = input("Token: ")
 erase()
-breh = bot.lower()
-if "t" in breh or "true" in breh:
+botxd = bot.lower()
+if "t" in botxd or "true" in botxd:
     headers = {'Authorization': f'Bot {tkn}'}
 else:
     headers = {"Authorization": tkn}
     
     
-bruhness = input("Target Server ID: ")
-ghey = input("Your Stealing Server ID: ")
-idk = int(bruhness)
-nvm = int(ghey)
+slap_guild_ = input("Target Server ID: ")
+server_ = input("Your Stealing Server ID: ")
+idk = int(server_)
+nvm = int(slap_guild_)
 erase()
 code = input("Vanity Url Code : discord.gg/")
 api = random.choice([8, 9])
@@ -58,11 +58,11 @@ async def change_vanity():
                 'reason': 'clapped by risinplayz'
   }
   async with aiohttp.ClientSession(headers=headers, connector=None) as handshake:
-    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{idk}/vanity-url", json=anime) as sexxed:
+    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{idk}/vanity-url", json=anime) as slapped:
         if sexxed.status in (200, 201, 204):
-            print(f"Changed the vanity in target server, status: {sexxed.status}\n\nAttempting to snipe....")
+            print(f"Changed the vanity in target server, status: {slapped.status}\n\nAttempting to snipe....")
             return
-        print(f"Unable to change vanity in target server, status: {sexxed.status}\nTry again by enabling 2fa / enabling intents.")
+        print(f"Unable to change vanity in target server, status: {slapped.status}\nTry again by enabling 2fa / enabling intents.")
         time.sleep(12)
         sys.exit()
 
@@ -71,12 +71,12 @@ async def change_vanity():
 
 async def steal_vanity():
   await asyncio.sleep(0.25)
-  ahyeah = {
+  ofc = {
                 'code': code,
                 'reason': 'hoooooo lmao ded'
   }
   async with aiohttp.ClientSession(headers=headers, connector=None) as handshake:
-    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{nvm}/vanity-url", json=ahyeah) as clown:
+    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{nvm}/vanity-url", json=ofc) as clown:
         erase()
         if clown.status in (200, 201, 204):
             print(f"\n\nVanity discord.gg/{code} sniped successfully, status: {clown.status}")
