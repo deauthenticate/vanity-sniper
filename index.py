@@ -76,14 +76,14 @@ async def swap_vanity():
                 'reason': 'removed'
   }
   async with aiohttp.ClientSession(headers=headers, connector=None) as handshake:
-    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{nvm}/vanity-url", json=ofc) as clown:
+    async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{nvm}/vanity-url", json=ofc) as paste:
         erase()
-        if clown.status in (200, 201, 204):
-            print(f"\n\nVanity discord.gg/{code} sniped successfully, status: {clown.status}")
+        if paste.status in (200, 201, 204):
+            print(f"\n\nVanity discord.gg/{code} sniped successfully, status: {paste.status}")
             time.sleep(12)
             return
             sys.exit()
-        print(f"Unable to Snipe discord.gg/{code}, status: {clown.status}\nTry again by enabling 2fa / enabling intents / using a vps.")
+        print(f"Unable to Snipe discord.gg/{code}, status: {paste.status}\nTry again by enabling 2fa / enabling intents / using a vps.")
         time.sleep(12)
         sys.exit()
  
