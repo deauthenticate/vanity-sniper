@@ -1,9 +1,9 @@
 '''
 
-~ THIS SHIT IS N̶O̶T̶ MADE FOR EDUCATIONAL PURPOSES
+~ MADE FOR EDUCATIONAL PURPOSES
 ~ USE VPS FOR BEST RESULTS
-~ Fastest Python Discord Vanity Url Stealer on Cord
-~ By RisinPlayZ#1337
+~ Fastest Python Discord Vanity Url Swapper on Cord
+~ By Exploit
 
 
 
@@ -29,7 +29,7 @@ bot = input("Bot [True/False]: ")
 erase()
 tkn = input("Token: ")
 erase()
-botxd = bot.lower()
+botxd = bot.lower() # no longer works with bots as discord removed vanity-url api access for bots
 if "t" in botxd or "true" in botxd:
     headers = {'Authorization': f'Bot {tkn}'}
 else:
@@ -55,7 +55,7 @@ async def change_vanity():
   playz = f"risinplayz-sniper-{ikr}"
   anime = {
                 'code': playz,
-                'reason': 'clapped by risinplayz'
+                'reason': 'exploit - swapper'
   }
   async with aiohttp.ClientSession(headers=headers, connector=None) as handshake:
     async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{idk}/vanity-url", json=anime) as slapped:
@@ -69,11 +69,11 @@ async def change_vanity():
 
 
 
-async def steal_vanity():
+async def swap_vanity():
   await asyncio.sleep(0.25)
   ofc = {
                 'code': code,
-                'reason': 'hoooooo lmao ded'
+                'reason': 'removed'
   }
   async with aiohttp.ClientSession(headers=headers, connector=None) as handshake:
     async with handshake.patch(f"https://discord.com/api/v{api}/guilds/{nvm}/vanity-url", json=ofc) as clown:
@@ -95,7 +95,7 @@ async def steal_vanity():
         
 async def risinplayzobv():  
 	notThreading = loop.create_task(change_vanity())
-	Concurrency = loop.create_task(steal_vanity())
+	Concurrency = loop.create_task(swap_vanity())
 	await asyncio.wait([notThreading, Concurrency])    
 
 
